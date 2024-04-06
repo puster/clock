@@ -1,5 +1,8 @@
+input.onButtonPressed(Button.A, function () {
+    kitronik_halo_hd.setTime(17, 38, 0)
+})
 let haloDisplay = kitronik_halo_hd.createZIPHaloDisplay(60)
-haloDisplay.setBrightness(21)
+haloDisplay.setBrightness(10)
 basic.forever(function () {
     haloDisplay.clear()
     haloDisplay.setBrightness(255)
@@ -15,5 +18,5 @@ basic.forever(function () {
 })
 basic.forever(function () {
     basic.showString(kitronik_halo_hd.readTime().substr(0, 5))
-    basic.pause(5000)
+    basic.pause(2000)
 })
